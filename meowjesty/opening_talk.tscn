@@ -14,3 +14,4 @@ script = ExtResource("1_0kgj4")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1876136182]
 stream = ExtResource("2_fkpkv")
+volume_db = 3.649

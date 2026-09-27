@@ -53,6 +53,7 @@ var is_typing: bool = false
 var skip_requested: bool = false
 
 func _ready() -> void:
+	$AudioStreamPlayer.play()
 	dialogue_box = generate_dialogue_box()
 	add_child(dialogue_box)
 	
@@ -113,9 +114,11 @@ func _input(event: InputEvent) -> void:
 
 func display_current_line() -> void:
 	if current_line_index >= dialogue_queue.size():
+		get_tree().change_scene_to_file("res://level_2.tscn")
 		curr_Felix.queue_free()
 		curr_Opp.queue_free()
 		dialogue_box.queue_free()
+		
 		return
 		
 	var current_index: int = current_line_index
