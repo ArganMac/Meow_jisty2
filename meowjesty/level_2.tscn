@@ -200,6 +200,7 @@ script = ExtResource("1_1y8me")
 enemy_scene = ExtResource("3_xdadj")
 
 [node name="Conductor" parent="." unique_id=765007323 instance=ExtResource("3_ehv2h")]
+volume_db = -2.916
 
 [node name="StartTimer2" type="Timer" parent="Conductor" unique_id=832298990]
 
@@ -346,4 +347,3 @@ wait_time = 87.0
 [connection signal="animation_finished" from="player/AnimatedSprite2D" to="player" method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="KillTimer" to="enemy" method="_on_kill_timer_timeout"]
-[connection signal="timeout" from="EndTimer" to="." method="_on_end_timer_timeout"]
